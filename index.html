@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<HTML>
+
+<HEAD>
+	<TITLE> Practise Assistance </TITLE>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="style.css">
+</HEAD>
+
+<BODY class="background">
+	<DIV class = "userInput" style ="width: 450px;">
+		<h2 class = "title"> Musician Practise assistant </h2>
+	
+		<form>
+			<div style="text-align:center;" id="countdownContainer">
+				<input id="display" class="box" type ="time" value="00:00" min="00:00" max="00:30"> 
+				<input class="btn_start" type="button" value="Begin"> 
+			</div>
+		</form>
+
+		<p hidden id="countdown" class="countdown_class">00:00</p>
+		<p id="siteError" class = "error">You must be watching a youtube video in order for timer to work.</p>
+	</DIV>
+
+	<script src="Content.js" defer></script>
+
+</BODY>
+</HTML>
