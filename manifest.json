@@ -1,0 +1,26 @@
+{
+    "name": "Musician Practise assistant",
+    "version": "1.0.0",
+    "description": "Allows a timer to be played before a youtube video begins.",
+    "manifest_version":3,
+    "author": "Alvia Vaz",
+    "action":{
+        "default_popup":"index.html",
+        "default_title": "Music practise assistant"
+    },
+    "permissions": ["scripting", "tabs", "activeTab"],
+    "host_permissions": ["*://www.youtube.com/*"],
+    "content_scripts":
+    [
+        {
+            "all_frames": false,
+            "matches": ["*://www.youtube.com/watch*"],
+            "run_at": "document_idle",
+            "js": ["Content.js"]
+        }
+    ], 
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  }
+
+}
